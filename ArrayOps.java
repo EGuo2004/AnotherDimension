@@ -6,6 +6,7 @@ public class ArrayOps {
     }
     return ArraySum;
   }
+
   public static int largest(int[] arr) {
     int BiggestValue = 0;
     for ( int i = 0; i < arr.length; i++) {
@@ -15,6 +16,7 @@ public class ArrayOps {
     }
     return BiggestValue;
   }
+
   public static int[] sumRows(int[][] matrix) {
     int[] SumEach = new int[matrix.length];
     for (int j = 0; j < matrix.length; j++) {
@@ -22,6 +24,7 @@ public class ArrayOps {
     }
     return SumEach;
   }
+
   public static int[] largestRows(int[][] matrix) {
     int [] LargestEach = new int[matrix.length];
     for (int j = 0; j < matrix.length; j++) {
@@ -29,7 +32,18 @@ public class ArrayOps {
     }
     return LargestEach;
   }
+
   public static int sum(int[][] arr) {
     return sum(sumRows(arr));
+  }
+
+  public static int[][] ColsToRows(int[][] matrix) {
+    int [][] RowsToCols = new int [matrix[0].length][matrix.length];
+    for (int j = 0; j < matrix[0].length; j++) {
+      for (int k = 0; k < matrix.length; k++) {
+        RowsToCols[j][k] = matrix[k][j];
+      }
+    }
+    return RowsToCols;
   }
 }
