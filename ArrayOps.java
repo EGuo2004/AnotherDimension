@@ -47,7 +47,17 @@ public class ArrayOps {
     return RowsToCols;
   }
 
-  public static int[] sumCols(int [][] matrix) {
+  public static int[] sumCols(int[][] matrix) {
     return sumRows(ColsToRows(matrix));
+  }
+
+  public static boolean isEqual(int[] arr) {
+    boolean equal = true;
+    for (int k = 0; k < arr.length - 1; k++) {
+      if (arr[k] != arr[k + 1]) {
+        equal = false;
+      }
+    }
+    return equal;
   }
 }
