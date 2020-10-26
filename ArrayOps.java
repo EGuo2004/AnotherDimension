@@ -60,4 +60,8 @@ public class ArrayOps {
     }
     return equal;
   }
+
+  public static boolean isRowMagic(int[][] matrix) {
+    return isEqual(sumRows(matrix));
+  }
 }
