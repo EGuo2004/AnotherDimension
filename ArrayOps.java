@@ -64,4 +64,8 @@ public class ArrayOps {
   public static boolean isRowMagic(int[][] matrix) {
     return isEqual(sumRows(matrix));
   }
+
+  public static boolean isColMagic(int[][] matrix) {
+    return isEqual(sumRows(ColsToRows(matrix)));
+  }
 }
