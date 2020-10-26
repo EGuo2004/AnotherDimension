@@ -22,4 +22,11 @@ public class ArrayOps {
     }
     return SumEach;
   }
+  public static int[] largestRows(int[][] matrix) {
+    int [] LargestEach = new int[matrix.length];
+    for (int j = 0; j < matrix.length; j++) {
+      LargestEach[j] = largest(matrix[j]);
+    }
+    return LargestEach;
+  }
 }
