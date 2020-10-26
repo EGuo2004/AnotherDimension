@@ -25,7 +25,7 @@ public class ArrayOps {
     return SumEach;
   }
 
-  public static int[] largestRows(int[][] matrix) {
+  public static int[] largestInRows(int[][] matrix) {
     int [] LargestEach = new int[matrix.length];
     for (int j = 0; j < matrix.length; j++) {
       LargestEach[j] = largest(matrix[j]);
@@ -67,5 +67,13 @@ public class ArrayOps {
 
   public static boolean isColMagic(int[][] matrix) {
     return isEqual(sumRows(ColsToRows(matrix)));
+  }
+
+  public static boolean isLocationMagic(int[][] matrix, int row, int col) {
+    int [] RowCheck = new int[matrix.length];
+    int [] ColumnCheck = new int[matrix[0].length];
+    RowCheck = sumRows(matrix);
+    ColumnCheck = sumCols(matrix);
+    return RowCheck[row] == ColumnCheck[col];
   }
 }
